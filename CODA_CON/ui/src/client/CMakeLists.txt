@@ -1,0 +1,6 @@
+include_directories(../../include/client)
+include_directories(../../include/common)
+include_directories(../../include/)
+set(SRCS driver.cpp filesystem_client.cpp network_client.cpp utest_client.cpp schema.cpp main.cpp)
+add_executable(client ${SRCS})
+target_link_libraries(client common pthread)

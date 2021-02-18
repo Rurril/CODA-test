@@ -1,0 +1,6 @@
+include_directories(../../include/server)
+include_directories(../../include/common)
+include_directories(../../include/)
+set(SRCS  driver.cpp filesystem_server.cpp  network_server.cpp utest.cpp main.cpp)
+add_executable(server ${SRCS})
+target_link_libraries(server common pthread)
